@@ -33,10 +33,13 @@ class TestAddrole():
         #点击角色管理
         self.driver.find_element_by_xpath("//a[contains(@href,'/basicsetting/role-management')]").click()
         sleep(2)
+        #输入框输入想筛选的数据
         self.driver.find_elements_by_class_name("el-input__inner")[0].send_keys("测试权限")
         sleep(2)
+        #点击修改按钮
         self.driver.find_element_by_css_selector(".btn-primary").click()
         sleep(2)
+        #点击编辑
         self.driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[2]/div[2]/section/div/div/div[2]/div[2]/div[1]/div[5]/div[2]/table/tbody/tr/td[7]/div/div/div[1]').click()
         sleep(2)
         #将没有全选的模块去勾选,需要双击
